@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int printArray(int arr[], int n){
+    for (int i=0; i<n; i++){
+        cout<< arr[i]<<endl;
+    }
+    cout<<""<<endl;
+}
+
+int reverse(int arr[], int size){
+    int start= 0;  // we want to change the postion in array not address
+    int end= size-1;
+    while(start<=end){
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+}
+
+int main() {
+    int array[10]= {1,2,3,4,5,6,7,8,9,10};
+    reverse(array,10);
+    printArray(array,10);
+}
